@@ -24,16 +24,16 @@
       </button>
       <a class="navbar-brand" rel="home" href="#" title="Memetropolis">
           <img style="max-width:100px; margin-top: -7px;"
-               src="./pngs/memetext.png"></a>
+               src="pngs/memetext.png"></a>
       <a class="navbar-brand" rel="home" href="#" title="Memetropolis">
           <img style="max-width:100px; margin-top: -7px;"
-                    src="./pngs/loginlogo.png"></a>
+                    src="pngs/loginlogo.png"></a>
       <a class="navbar-brand" rel="home" href="#" title="Memetropolis">
           <img style="max-width:100px; margin-top: -7px;"
-                         src="./pngs/signuplogo.png"></a>
+                         src="pngs/signuplogo.png"></a>
        <a class="navbar-brand" rel="home" href="#" title="Memetropolis">
           <img style="max-width:100px; margin-top: -7px;"
-                src="./pngs/memelogo.png"></a>
+                src="pngs/memelogo.png"></a>
   </div>
   <div class="sidebar" style="width:200px; margin-left:auto; margin-right:0;">
 
@@ -58,14 +58,6 @@
 </div>
 </div>
 
-
-{% for post in posts %}
-   <div>
-       <p>published: {{ post.published_date }}</p>
-       <h1><a href="">{{ post.category }}</a></h1>
-       <p><img src="{{ post.text}}" width="300px"></p>
-   </div>
-{% endfor %}
 
 
 </body>
