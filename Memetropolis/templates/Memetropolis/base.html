@@ -1,5 +1,7 @@
 <html>
 <head>
+<link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -9,7 +11,16 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+  <style>
+  .sidebar {
+      font-family: 'Poppins';font-size: 15px;
+  }
+  .panel > .panel-heading {
+    background-image: none;
+    background: linear-gradient(to bottom, #ffcc99 0%, #ff99cc 100%);
+    color: white;
+  }
+  </style>
 </head>
 
 <body>
@@ -23,19 +34,25 @@
           <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" rel="home" href="#" title="Memetropolis">
-          <img style="max-width:100px; margin-top: -7px;"
-               src="./pngs/memetext.png">
+          <img style="max-width:250px; margin-top: -7px;"
+               src="./pngs/memetextnew.png">
       </a>
       <a class="navbar-brand" rel="home" href="#" title="sign up">
           <img style="max-width:100px; margin-top: -7px;"
-               src="./pngs/signuplogo.png">
+               src="./pngs/signuplogonew.png">
       <a class="navbar-brand" rel="home" href="#" title="login">
           <img style="max-width:100px; margin-top: -7px;"
-                src="./pngs/loginlogo.png">
+                src="./pngs/loginlogonew.png">
                </a>
-      </a>
+
+
+    <a class="navbar-brand" rel="home" href="#" title="Add Post">
+          <img style="max-width:120px; margin-top: 0px; float:right;"
+                src="./pngs/addposticon.png">
+               </a>
+
   </div>
-  <div class="sidebar" style="width:200px; float:right">
+  <div class="sidebar" style="width:300px; float:right">
 
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
@@ -47,11 +64,12 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="list-group">
-        <button type="button" class="list-group-item">Cras justo odio</button>
-        <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
-        <button type="button" class="list-group-item">Morbi leo risus</button>
-        <button type="button" class="list-group-item">Porta ac consectetur ac</button>
-        <button type="button" class="list-group-item">Vestibulum at eros</button>
+        <button type="button" class="list-group-item">Animal Memes<span class="glyphicons glyphicons-cat"></span></button>
+        <button type="button" class="list-group-item">Throwback Memes</button>
+        <button type="button" class="list-group-item">Trending Memes</button>
+        <button type="button" class="list-group-item">Relationship/Break-Up Memes</button>
+        <button type="button" class="list-group-item">Black Twitter Memes</button>
+        <button type="button" class="list-group-item">Dank Memes</button>
     </div>
   </div>
 </div>
