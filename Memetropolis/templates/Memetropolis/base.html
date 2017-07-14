@@ -1,5 +1,6 @@
 <html>
 <head>
+  <script src="https://use.fontawesome.com/69bb6528b4.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
 
   <!-- Latest compiled and minified CSS -->
@@ -19,6 +20,10 @@
     background-image: none;
     background: linear-gradient(to bottom, #ffcc99 0%, #ff99cc 100%);
     color: white;
+
+  }
+  .i{
+    size: 20px;
   }
   </style>
 </head>
@@ -41,5 +46,66 @@
             </div>
         </div>
     </div>
+<a href="{% url 'post_new' %}" class="top-menu"></a>
+ <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" rel="home" href="#" title="Memetropolis">
+          <img style="max-width:250px; margin-top: -7px;"
+               src="./pngs/memetextnew.png">
+      </a>
+      <a class="navbar-brand" rel="home" href="#" title="sign up">
+          <img style="max-width:100px; margin-top: -7px;"
+               src="./pngs/signuplogonew.png">
+      <a class="navbar-brand navbar-right" rel="home" href="#" title="login">
+          <img style="max-width:100px; margin-top: -7px;"
+                src="./pngs/loginlogonew.png">
+               </a>
+
+
+    <a class="navbar-brand navbar-right" rel="home" href="{% url 'post_new' %}" title="Add Post">
+          <img style="max-width:120px; margin-top: 0px; float:right;"
+                src="./pngs/addposticon.png">
+               </a>
+
+  </div>
+</nav>
+  <div class="sidebar" style="width:300px; float:right">
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button">
+          Categories
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="list-group">
+        <button type="button" class="list-group-item">Animal Memes<i class="fa fa-bug" aria-hidden="true"></i></button>
+        <button type="button" class="list-group-item">Throwback Memes<i class="fa fa-backward" aria-hidden="true"></i></button>
+        <button type="button" class="list-group-item">Trending Memes<i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+        <button type="button" class="list-group-item">Relationship/Break-Up Memes<i class="fa fa-heart" aria-hidden="true"></i></button>
+        <button type="button" class="list-group-item">Black Twitter Memes<i class="fa fa-twitter" aria-hidden="true"></i></button>
+        <button type="button" class="list-group-item">Dank Memes<i class="fa fa-bomb" aria-hidden="true"></i></button>
+
+
+
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="content container">
+       <div class="row">
+           <div class="col-md-8">
+           {% block content %}
+           {% endblock %}
+           </div>
+       </div>
+   </div>
+
+   <img src="http://i2.kym-cdn.com/photos/images/masonry/001/175/437/c1b.jpg"  class="img-thumbnail">
+
 </body>
 </html>
