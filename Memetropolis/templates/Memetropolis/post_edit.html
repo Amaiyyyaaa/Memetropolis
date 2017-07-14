@@ -1,9 +1,21 @@
 {% extends 'Memetropolis/base.html' %}
 
 {% block content %}
-    <h1>New post</h1>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+<style>
+h1 {
+    color: black;
+    font-family: 'Poppins';
+    font-size: 250%;
+  }
+  </style>
+</head>
+
+    <h1>Upload.</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+        <button type="submit" class="save btn btn-default">Post</button>
     </form>
+
 {% endblock %}
