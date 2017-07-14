@@ -24,17 +24,10 @@
 </head>
 
 <body>
-  <div class="page-header">
 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-  <div class="navbar-header">
-    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-      <button type="button" class="navbar-toggle" data-toggle="collapse"
-              data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-      </button>
+ <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
       <a class="navbar-brand" rel="home" href="#" title="Memetropolis">
           <img style="max-width:250px; margin-top: -7px;"
                src="./pngs/memetextnew.png">
@@ -42,18 +35,19 @@
       <a class="navbar-brand" rel="home" href="#" title="sign up">
           <img style="max-width:100px; margin-top: -7px;"
                src="./pngs/signuplogonew.png">
-      <a class="navbar-brand" rel="home" href="#" title="login">
+      <a class="navbar-brand navbar-right" rel="home" href="#" title="login">
           <img style="max-width:100px; margin-top: -7px;"
                 src="./pngs/loginlogonew.png">
                </a>
 
 
-    <a class="navbar-brand" rel="home" href="#" title="Add Post">
+    <a class="navbar-brand navbar-right" rel="home" href="#" title="Add Post">
           <img style="max-width:120px; margin-top: 0px; float:right;"
                 src="./pngs/addposticon.png">
                </a>
 
   </div>
+</nav>
   <div class="sidebar" style="width:300px; float:right">
 
   <div class="panel panel-default">
