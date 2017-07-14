@@ -24,62 +24,22 @@
 </head>
 
 <body>
-<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
- <nav class="navbar navbar-default">
-    <div class="container-fluid">
-
-      <a class="navbar-brand" rel="home" href="#" title="Memetropolis">
-          <img style="max-width:250px; margin-top: -7px;"
-               src="./pngs/memetextnew.png">
-      </a>
-      <a class="navbar-brand" rel="home" href="#" title="sign up">
-          <img style="max-width:100px; margin-top: -7px;"
-               src="./pngs/signuplogonew.png">
-      <a class="navbar-brand navbar-right" rel="home" href="#" title="login">
-          <img style="max-width:100px; margin-top: -7px;"
-                src="./pngs/loginlogonew.png">
-               </a>
-
-
-    <a class="navbar-brand navbar-right" rel="home" href="#" title="Add Post">
-          <img style="max-width:120px; margin-top: 0px; float:right;"
-                src="./pngs/addposticon.png">
-               </a>
-
-  </div>
-</nav>
-  <div class="sidebar" style="width:300px; float:right">
-
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a role="button">
-          Categories
-        </a>
-      </h4>
+    <div class="page-header">
+        {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+        {% else %}
+            <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+        {% endif %}
+        <h1><a href="/">Memetropolis</a></h1>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="list-group">
-        <button type="button" class="list-group-item">Animal Memes<span class="glyphicons glyphicons-cat"></span></button>
-        <button type="button" class="list-group-item">Throwback Memes</button>
-        <button type="button" class="list-group-item">Trending Memes</button>
-        <button type="button" class="list-group-item">Relationship/Break-Up Memes</button>
-        <button type="button" class="list-group-item">Black Twitter Memes</button>
-        <button type="button" class="list-group-item">Dank Memes</button>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-</div>
-
-<div class="content container">
-       <div class="row">
-           <div class="col-md-8">
-           {% block content %}
-           {% endblock %}
-           </div>
-       </div>
-   </div>
-
-
 </body>
 </html>
