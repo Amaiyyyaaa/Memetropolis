@@ -8,6 +8,8 @@ class Post(models.Model):
     text = models.TextField()
     published_date = models.DateTimeField(
             blank=True, null=True)
+    def approved_comments(self):
+        return self.comments.filter(approved_comment=True)
 
     def publish(self):
         self.published_date = timezone.now()
