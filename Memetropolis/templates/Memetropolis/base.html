@@ -12,6 +12,7 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ {% load staticfiles %}
   <style>
   .sidebar {
       font-family: 'Poppins';font-size: 15px;
@@ -29,44 +30,32 @@
 </head>
 
 <body>
-    <div class="page-header">
-        {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-        {% else %}
-            <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-        {% endif %}
-        <h1><a href="/">Memetropolis</a></h1>
-    </div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-            {% block content %}
-            {% endblock %}
-            </div>
-        </div>
-    </div>
+
+
 <a href="{% url 'post_new' %}" class="top-menu"></a>
  <nav class="navbar navbar-default">
     <div class="container-fluid">
 
-      <a class="navbar-brand" rel="home" href="#" title="Memetropolis">
+      <a class="navbar-brand" rel="home" href="/" title="Memetropolis">
           <img style="max-width:250px; margin-top: -7px;"
-               src="./pngs/memetextnew.png">
+               src="{% static "/pngs/memetextnew.png" %}">
       </a>
+      {% if user.is_authenticated %}
+      <a class="navbar-brand navbar-right" rel="home" href="{% url 'post_new' %}" title="Add Post">
+            <img style="max-width:120px; margin-top: 0px; float:right;"
+                  src="{% static "/pngs/addposticon.png" %}">
+                 </a>
+      {% else %}
       <a class="navbar-brand" rel="home" href="#" title="sign up">
           <img style="max-width:100px; margin-top: -7px;"
-               src="./pngs/signuplogonew.png">
-      <a class="navbar-brand navbar-right" rel="home" href="#" title="login">
+               src="{% static "/pngs/signuplogonew.png" %}">
+      <a class="navbar-brand navbar-right" rel="home" href="{% url 'login' %}" title="login">
           <img style="max-width:100px; margin-top: -7px;"
-                src="./pngs/loginlogonew.png">
+                src="{% static "/pngs/loginlogonew.png" %}">
                </a>
 
+      {% endif %}
 
-    <a class="navbar-brand navbar-right" rel="home" href="{% url 'post_new' %}" title="Add Post">
-          <img style="max-width:120px; margin-top: 0px; float:right;"
-                src="./pngs/addposticon.png">
-               </a>
 
   </div>
 </nav>
@@ -105,7 +94,7 @@
        </div>
    </div>
 
-   
+
 
 </body>
 </html>
