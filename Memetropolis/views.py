@@ -9,7 +9,6 @@ from django.contrib.auth.decorators import login_required
 
 
 #Create your views here.
-@login_required
 def post_list(request, cat):
     posts = Post.objects.filter(published_date__lte=timezone.now(), category__contains=cat).order_by('published_date')
     return render(request, 'Memetropolis/homepage.html',  {'posts': posts})
