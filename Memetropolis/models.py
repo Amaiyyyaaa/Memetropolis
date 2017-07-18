@@ -12,7 +12,7 @@ CAT_CHOICES = {
 
 class Post(models.Model):
     user = models.ForeignKey('auth.User')
-    category = models.CharField(choices=CAT_CHOICES, default='Trending Memes')
+    category = models.CharField(max_legth=200, choices=CAT_CHOICES, default='Trending Memes')
     text = models.TextField()
     published_date = models.DateTimeField(
             blank=True, null=True)
