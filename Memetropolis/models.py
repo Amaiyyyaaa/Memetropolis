@@ -2,12 +2,12 @@ from django.db import models
 from django.utils import timezone
 
 CAT_CHOICES = {
-(1, 'Animal'),
-(2, 'Throwback'),
-(3, 'Trending'),
-(4, 'Relationship'),
-(5, 'BlackTwitter'),
-(6, 'Dank'),
+(1, 'animal'),
+(2, 'throwback'),
+(3, 'trending'),
+(4, 'relationship'),
+(5, 'blackTwitter'),
+(6, 'dank'),
 }
 
 class Post(models.Model):
