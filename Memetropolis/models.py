@@ -1,10 +1,18 @@
 from django.db import models
 from django.utils import timezone
 
+CAT_CHOICES = {
+(1, 'Animal Memes'),
+(2, 'Throwback Memes'),
+(3, 'Trending Memes'),
+(4, 'Relationship/Break-Up Memes'),
+(5, 'Black Twitter Memes'),
+(6, 'Dank Memes'),
+}
 
 class Post(models.Model):
     user = models.ForeignKey('auth.User')
-    category = models.CharField(max_length=200)
+    category = models.CharField(max_length=200, choices=CAT_CHOICES, default='Trending Memes')
     text = models.TextField()
     published_date = models.DateTimeField(
             blank=True, null=True)
