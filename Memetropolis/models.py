@@ -6,7 +6,7 @@ CAT_CHOICES = {
 (2, 'Throwback Memes'),
 (3, 'Trending Memes'),
 (4, 'Relationship/Break-Up Memes'),
-(5, 'Black Twitter Memes'),
+(5, 'BlackTwitter Memes'),
 (6, 'Dank Memes'),
 }
 
