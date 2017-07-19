@@ -8,6 +8,7 @@ CAT_CHOICES = {
 ('Relationship', 'Relationship'),
 ('BlackTwitter', 'BlackTwitter'),
 ('Dank', 'Dank'),
+('Wholesome', 'Wholesome'),
 }
 
 class Post(models.Model):
